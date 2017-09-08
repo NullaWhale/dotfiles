@@ -33,6 +33,9 @@ alias -s {odt,doc,sxw,rtf}=openoffice.org
 autoload -U pick-web-browser
 alias -s {html,htm}=chromium
 
+alias vi='vim'
+alias mvn4='mvn -T 4 clean install -DskipTests'
+
 # example: extract file
 extract () {
   if [ -f $1 ] ; then
