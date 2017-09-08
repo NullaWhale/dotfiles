@@ -33,17 +33,6 @@ alias -s {odt,doc,sxw,rtf}=openoffice.org
 autoload -U pick-web-browser
 alias -s {html,htm}=chromium
 
-# git stuff
-alias g='git'
-alias ga='git add'
-alias gaa='git add --all'
-alias gb='git branch'
-alias gcmsg='git commit -m'
-alias gco='git checkout'
-alias gd='git diff'i
-alias gcl='git clone --recursive'
-alias gcf='git config --list'
-
 # example: extract file
 extract () {
   if [ -f $1 ] ; then
