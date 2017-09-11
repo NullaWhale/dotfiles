@@ -1,11 +1,9 @@
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-bindkey -e
-
 export ZSH=$HOME/.oh-my-zsh
+
 ZSH_THEME="nicoulaj"
-plugins=(git)
+
+plugins=(git battery command-not-found last-working-dir screen archlinux themes)
+
 source $ZSH/oh-my-zsh.sh
 
 zstyle :compinstall filename '/home/nicl-arch/.zshrc'
