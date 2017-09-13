@@ -12,10 +12,18 @@ autoload -U compinit promptinit
 compinit
 promptinit
 
+if [ -f ~/.zsh_work ]; then
+    source ~/.zsh_work
+fi
+
 # For pacman
 [[ -a $(whence -p pacman-color) ]] && compdef _pacman pacman-color=pacman
 
 setopt CORRECT_ALL
+
+# don't share history between shells
+unsetopt SHARE_HISTORY
+setopt no_share_history
 
 SPROMPT="Error! Enter %r instead %R? ([Y]es/[N]o/[E]dit/[A]bort) "
 
