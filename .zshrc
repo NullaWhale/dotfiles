@@ -19,13 +19,13 @@ fi
 # For pacman
 [[ -a $(whence -p pacman-color) ]] && compdef _pacman pacman-color=pacman
 
-setopt CORRECT_ALL
+unsetopt correct_all
 
 # don't share history between shells
 unsetopt SHARE_HISTORY
 setopt no_share_history
 
-SPROMPT="Error! Enter %r instead %R? ([Y]es/[N]o/[E]dit/[A]bort) "
+SPROMPT="Ошибко! Enter %r instead %R? ([Y]es/[N]o/[E]dit/[A]bort) "
 
 setopt autocd
 zstyle ':completion:*' menu select=long-list select=0
@@ -39,7 +39,8 @@ alias -s {odt,doc,sxw,rtf}=openoffice.org
 autoload -U pick-web-browser
 alias -s {html,htm}=chromium
 
-alias vi='vim'
+alias vi='nocorrect vim'
+alias vim='nocorrect vim'
 alias mvn4='mvn -T 4 clean install -DskipTests'
 
 # example: extract file
