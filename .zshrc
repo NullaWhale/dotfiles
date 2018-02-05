@@ -46,11 +46,7 @@ alias mvn4='mvn -T 4 clean install -DskipTests'
 
 # create and open folder
 take () {
-  if [ $1 ] ; then
-    md $1 && cd $1
-  else
-    echo "wrong name: '$1'"
-  fi
+  mkdir $1 && cd $1
 }
 
 # example: extract file
