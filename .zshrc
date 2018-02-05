@@ -1,8 +1,9 @@
 export ZSH=$HOME/.oh-my-zsh
+export EDITOR=vim
 
 ZSH_THEME="nicoulaj"
 
-plugins=(git battery command-not-found last-working-dir screen archlinux themes)
+plugins=(git mercurial battery command-not-found last-working-dir screen archlinux themes)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -42,6 +43,15 @@ alias -s {html,htm}=chromium
 alias vi='nocorrect vim'
 alias vim='nocorrect vim'
 alias mvn4='mvn -T 4 clean install -DskipTests'
+
+# create and open folder
+take () {
+  if [ $1 ] ; then
+    md $1 && cd $1
+  else
+    echo "wrong name: '$1'"
+  fi
+}
 
 # example: extract file
 extract () {
