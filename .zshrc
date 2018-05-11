@@ -1,6 +1,11 @@
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR=vim
 
+export GOPATH=$HOME/.go
+export GOROOT=/usr/lib/go
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+
 ZSH_THEME="nicoulaj"
 
 plugins=(git mercurial battery command-not-found last-working-dir screen archlinux themes)
@@ -34,8 +39,9 @@ zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 # Aliases
 alias l='ls -l --color=auto'
+alias e='nvim'
 alias grep='grep --colour=auto'
-alias -s {avi,mpeg,mpg,mov,m2v}=mplayer
+alias -s {avi,mpeg,mpg,mov,m2v,mp4}=mpv
 alias -s {odt,doc,sxw,rtf}=openoffice.org
 autoload -U pick-web-browser
 alias -s {html,htm}=chromium
@@ -43,6 +49,7 @@ alias -s {html,htm}=chromium
 alias vi='nocorrect vim'
 alias vim='nocorrect vim'
 alias mvn4='mvn -T 4 clean install -DskipTests'
+alias hlol=hlol='hg log -G -b . —template "{label('\''yellow'\'', rev)} {label('\''red'\'', shortest(node, 6))} -{label('\''yellow'\'', ifeq(branch, '\''default'\'', '\'\'', '\'' {branch}'\''))}{label('\''yellow'\'', if(tags, '\'' (tags: {join(tags, \'\'', \'\'')})'\''))}{label('\''yellow'\'', if(bookmarks, '\'' [bookmarks: {join(bookmarks, \'\'', \'\'')}]'\''))} {desc|strip|firstline} {label('\''green'\'', '\''({date|age})'\'')} {label('\''blue'\'', '\''<{author|person}>'\'')}\n"'
 
 # create and open folder
 take () {
