@@ -6,6 +6,17 @@ export GOROOT=/usr/lib/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
+export loom=$HOME/sources/loom/build/linux-x86_64-normal-server-release/images/jdk
+export jdk6=$HOME/sources
+export jdk11=$HOME/sources/jdk/build/linux-x86_64-normal-server-release/images/jdk
+export jdk=$HOME/sources/jdk8u/build/linux-x86_64-normal-server-release/images/j2sdk-image
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
+export PATH=${JAVA_HOME}/bin:$PATH
+
+export USER_HOME=$HOME
+export IDEA_HOME=$HOME/sources/intellij-community
+export JDK_18_HOME=$jdk
+
 ZSH_THEME="nicoulaj"
 
 plugins=(git mercurial battery command-not-found last-working-dir screen archlinux themes)
