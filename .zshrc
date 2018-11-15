@@ -62,6 +62,12 @@ alias vim='nocorrect vim'
 alias mvn4='mvn -T 4 clean install -DskipTests'
 alias hlol='hg log -G -b . --template "{label('\''yellow'\'', rev)} {label('\''red'\'', shortest(node, 6))} -{label('\''yellow'\'', ifeq(branch, '\''default'\'', '\'\'', '\'' {branch}'\''))}{label('\''yellow'\'', if(tags, '\'' (tags: {join(tags, \'\'', \'\'')})'\''))}{label('\''yellow'\'', if(bookmarks, '\'' [bookmarks: {join(bookmarks, \'\'', \'\'')}]'\''))} {desc|strip|firstline} {label('\''green'\'', '\''({date|age})'\'')} {label('\''blue'\'', '\''<{author|person}>'\'')}\n"'
 
+# Base pacman
+alias Syu='sudo pacman -Syu'
+alias Sy='sudo pacman -Sy'
+alias Su='sudo pacman -Su'
+alias Ss='sudo pacman -Ss'
+
 # create and open folder
 take () {
   mkdir $1 && cd $1
