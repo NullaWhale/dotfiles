@@ -16,4 +16,5 @@ alias hlol='hg log -G -b . --template "{label('\''yellow'\'', rev)} {label('\''r
 alias Syu='sudo pacman -Syu'
 alias Sy='sudo pacman -Sy'
 alias Su='sudo pacman -Su'
-alias Ss='sudo pacman -Ss'
+alias Ss='pacman -Ss'
+alias pS='sudo pacman -S'
