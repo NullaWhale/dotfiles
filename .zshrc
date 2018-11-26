@@ -48,25 +48,9 @@ setopt autocd
 zstyle ':completion:*' menu select=long-list select=0
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-# Aliases
-alias l='ls -l --color=auto'
-alias e='nvim'
-alias grep='grep --colour=auto'
-alias -s {avi,mpeg,mpg,mov,m2v,mp4}=mpv
-alias -s {odt,doc,sxw,rtf}=openoffice.org
-autoload -U pick-web-browser
-alias -s {html,htm}=chromium
-
-alias vi='nocorrect vim'
-alias vim='nocorrect vim'
-alias mvn4='mvn -T 4 clean install -DskipTests'
-alias hlol='hg log -G -b . --template "{label('\''yellow'\'', rev)} {label('\''red'\'', shortest(node, 6))} -{label('\''yellow'\'', ifeq(branch, '\''default'\'', '\'\'', '\'' {branch}'\''))}{label('\''yellow'\'', if(tags, '\'' (tags: {join(tags, \'\'', \'\'')})'\''))}{label('\''yellow'\'', if(bookmarks, '\'' [bookmarks: {join(bookmarks, \'\'', \'\'')}]'\''))} {desc|strip|firstline} {label('\''green'\'', '\''({date|age})'\'')} {label('\''blue'\'', '\''<{author|person}>'\'')}\n"'
-
-# Base pacman
-alias Syu='sudo pacman -Syu'
-alias Sy='sudo pacman -Sy'
-alias Su='sudo pacman -Su'
-alias Ss='sudo pacman -Ss'
+if [ -f ~/.aliases ]; then
+    source ~/.aliases
+fi
 
 # create and open folder
 take () {
