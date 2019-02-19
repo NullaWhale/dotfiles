@@ -1,6 +1,6 @@
 # Aliases
 alias l='ls -l --color=auto'
-alias e='nvim'
+alias e='nocorrect vim'
 alias grep='grep --colour=auto'
 alias -s {avi,mpeg,mpg,mov,m2v,mp4}=mpv
 alias -s {odt,doc,sxw,rtf}=openoffice.org
