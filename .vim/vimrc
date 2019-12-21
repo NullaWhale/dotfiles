@@ -31,15 +31,11 @@ Plug 'w0ng/vim-hybrid'
 Plug 'itchyny/lightline.vim'
 Plug 'cocopon/lightline-hybrid.vim'
 
-Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+Plug 'udalov/kotlin-vim'
+Plug 'scrooloose/nerdtree'
 
 " (Optional) Multi-entry selection UI.
 Plug 'junegunn/fzf'
-
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
 let g:lightline = {
       \ 'colorscheme': 'wombat',
@@ -208,6 +204,10 @@ nnoremap <c-l> <c-w>l
 nnoremap <d-9> :Gstatus<cr>
 nnoremap <m-9> :Gstatus<cr>
 " }}}
+
+
+map <C-n> :NERDTreeToggle<CR>
+
 
 " autocommands {{{
 if has("autocmd")
