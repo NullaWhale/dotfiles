@@ -11,6 +11,7 @@ export jdk11=/usr/lib/jvm/java-11-openjdk-amd64
 export jdk14=/usr/lib/jvm/java-14-openjdk-amd64
 export JAVA_HOME=$jdk8
 export PATH=${JAVA_HOME}/bin:$PATH
+export PATH=${HOME}/.cargo/bin:$PATH
 
 export USER_HOME=$HOME
 export IDEA_HOME=$HOME/sources/intellij-community
