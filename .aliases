@@ -20,3 +20,15 @@ alias Ss='pacman -Ss'
 alias pS='sudo pacman -S'
 
 alias o='open_command'
+
+alias dcd='docker-compose down'
+alias dcdv='docker-compose down -v'
+alias dcu='docker-compose up'
+alias dcud='docker-compose up -d'
+alias fullupdate='docker-compose down&&docker-compose up -d'
+
+alias c='xclip -selection clipboard'
+alias wa='watch -n 0.1 ls -la .'
+alias wh='watch -n 0.1 ls -lh .'
+
+alias openfortigui='sudo -E openfortigui'

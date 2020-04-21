@@ -12,6 +12,7 @@ Plug 'w0ng/vim-hybrid'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " LightLine plugin
