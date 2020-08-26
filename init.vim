@@ -13,6 +13,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 call plug#end()
 
 " LightLine plugin

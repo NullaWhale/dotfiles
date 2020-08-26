@@ -1,6 +1,6 @@
 # Aliases
 alias l='ls -l --color=auto'
-alias e='nocorrect vim'
+alias e='nvim'
 alias grep='grep --colour=auto'
 alias -s {avi,mpeg,mpg,mov,m2v,mp4}=mpv
 alias -s {odt,doc,sxw,rtf}=openoffice.org
@@ -30,5 +30,7 @@ alias fullupdate='docker-compose down&&docker-compose up -d'
 alias c='xclip -selection clipboard'
 alias wa='watch -n 0.1 ls -la .'
 alias wh='watch -n 0.1 ls -lh .'
+
+alias glow="glow -p"
 
 alias openfortigui='sudo -E openfortigui'

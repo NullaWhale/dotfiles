@@ -6,6 +6,8 @@ export GOROOT=/usr/lib/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
+export graal8="/home/nliapushkin/.sdkman/candidates/java/20.0.0.r8-grl"
+export jdk8o=/usr/lib/jvm/jdk1.8.0_251
 export jdk8=/usr/lib/jvm/java-8-openjdk-amd64
 export jdk11=/usr/lib/jvm/java-11-openjdk-amd64
 export jdk14=/usr/lib/jvm/java-14-openjdk-amd64
