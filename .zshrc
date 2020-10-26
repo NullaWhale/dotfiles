@@ -6,11 +6,10 @@ export GOROOT=/usr/lib/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
-export graal8="/home/nliapushkin/.sdkman/candidates/java/20.0.0.r8-grl"
 export jdk8o=/usr/lib/jvm/jdk1.8.0_251
-export jdk8=/usr/lib/jvm/java-8-openjdk-amd64
-export jdk11=/usr/lib/jvm/java-11-openjdk-amd64
-export jdk14=/usr/lib/jvm/java-14-openjdk-amd64
+export jdk8=/usr/lib/jvm/java-8-openjdk
+export jdk11=/usr/lib/jvm/java-11-openjdk
+export jdk14=/usr/lib/jvm/java-14-openjdk
 export JAVA_HOME=$jdk11
 export PATH=${JAVA_HOME}/bin:$PATH
 export PATH=${HOME}/.cargo/bin:$PATH
@@ -21,8 +20,10 @@ export JDK_18_HOME=$jdk
 
 export PATH="$PATH:$HOME/source/depot_tools"
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ZSH_THEME="nicoulaj"
 
