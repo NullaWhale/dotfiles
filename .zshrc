@@ -1,12 +1,11 @@
 export ZSH=$HOME/.oh-my-zsh
-export EDITOR=vim
+export EDITOR=nvim
 
 export GOPATH=$HOME/.go
 export GOROOT=/usr/lib/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
-export jdk8o=/usr/lib/jvm/jdk1.8.0_251
 export jdk8=/usr/lib/jvm/java-8-openjdk
 export jdk11=/usr/lib/jvm/java-11-openjdk
 export jdk14=/usr/lib/jvm/java-14-openjdk
@@ -31,7 +30,7 @@ plugins=(git mercurial battery command-not-found last-working-dir screen archlin
 
 source $ZSH/oh-my-zsh.sh
 
-zstyle :compinstall filename '/home/nicl-arch/.zshrc'
+zstyle :compinstall filename $HOME/.zshrc
 
 autoload -U compinit promptinit
 compinit
@@ -129,5 +128,7 @@ pull_all () {
 export PATH="/usr/local/opt/openssl/bin:$PATH"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/nliapushkin/.sdkman"
-[[ -s "/home/nliapushkin/.sdkman/bin/sdkman-init.sh" ]] && source "/home/nliapushkin/.sdkman/bin/sdkman-init.sh"
+if [ -f ~/.sdkman ]; then
+    export SDKMAN_DIR="$HOME/.sdkman"
+    [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+fi
